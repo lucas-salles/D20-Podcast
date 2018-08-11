@@ -1,0 +1,350 @@
+body, h1, h2, p, ul, li, a {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+* {
+    box-sizing: border-box;
+}
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+body {
+    background: #1e1e22;
+}
+
+.box-shadow {
+    box-shadow: 0px 2px 2px 2px rgba(0, 0, 0, 0.6);
+}
+
+
+
+
+ /*Header*/
+header {
+    background: #141418;
+    position: -webkit-sticky;
+    position: sticky;
+    z-index: 1;
+    top: -1px;
+}
+header .logo {
+    margin-left: 5%;
+}
+header .logo img {
+    float: left;
+    width: 8rem;
+}
+@media (min-width: 800px) {
+    header .logo img {
+        width: 12rem
+    }
+}
+.menu {
+    width: 100%;
+    height: 60px;
+    font-family: 'Roboto Slab', serif;
+}
+.menu ul {
+    position: relative;
+}
+.menu ul li {
+    width: 150px;
+    float: left;
+}
+.menu a {
+    padding: 15px;
+    display: block;
+    text-align: center;
+    color: #fff;
+}
+.menu ul ul {
+    position: absolute;
+    visibility: hidden;
+}
+.menu ul li:hover ul {
+    visibility: visible;
+}
+.menu a:hover {
+    color: #339933;
+}
+.menu ul ul li {
+    float: none;
+    border-bottom: solid 1px #ccc; 
+}
+.menu ul ul li a {
+    background-color: #141418;
+}
+label[for="bt_menu"] {
+    padding: 4px;
+    color: #fff;
+    text-align: center;
+    font-size: 30px;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    float: right;
+}
+#bt_menu {
+    display: none;
+}
+label[for="bt_menu"] {
+    display: none;
+}
+@media (max-width: 800px) {
+    label[for="bt_menu"] {
+        display: block;
+    }
+    #bt_menu:checked ~ .menu {
+        margin-left: 0;
+    }
+    .menu {
+        margin: 5px;
+        margin-left: -100%;
+        transition: all .4s;
+    }
+    .menu ul li {
+        width: 100%;
+        float: left;
+        border-bottom: 2px solid #3C3C40;
+        background: #141418;
+    }
+    .menu ul ul {
+        position: static;
+        overflow: hidden;
+        max-height: 0;
+        transition: all .4s;
+    }
+    .menu ul li:hover ul {
+        height: auto;
+        max-height: 200px;
+    }
+}
+@media (min-width: 800px) {
+    header .header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    }
+}
+
+
+
+/*Main*/
+main img {
+    width: 100%;
+    border-radius:10px;
+}
+main .banner {
+    background-image: url(../img/tela6.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    height: 100vh;
+    min-height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    clear: both;
+    margin-bottom: 80px;
+}
+main .intro-text p, main .intro-text h1 {
+    color: #ecece2;
+    font-family: 'IM Fell English SC', serif;
+}
+main .intro-text h1 {
+    margin: 0px;
+    font-size: 3em;
+    text-transform: uppercase;
+}
+  
+main .intro-text p {
+    font-size: 2em;
+    font-style: italic;
+}
+
+/*Slide*/
+main .post-detail {
+    margin: 20px;
+    padding: 10px;
+    color: #fff;
+    border-top: 1px solid #3C3C40;
+    border-bottom: 1px solid #3C3C40;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+}
+main .post-detail img {
+    width: 2.5rem;
+    margin-right: 30px;
+}
+main .post-detail time {
+    font-family: 'Roboto Slab', serif;
+    font-size: 12px;
+}
+main .slide1, main .slide2 {
+    padding: 0 10px;
+}
+main .slide1 {
+    transition: all 0.5s;
+}
+main .slide1:hover {
+    transform: scale(1.01);
+}
+main .slide1 h1 {
+    color: #fff;
+    padding: 10px;
+    font-family: 'IM Fell English SC', serif;
+    font-size: 10px;
+    position: relative;
+    bottom: 100px;
+}
+@media (min-width:600px) {
+    main .slide1 h1 {
+        font-size: 20px;
+    }
+}
+@media (min-width:1000px) {
+    main .slide1 h1 {
+         font-size: 40px;
+    }  
+}
+main .slide1 a:hover {
+    text-decoration: underline #fff;
+}
+main .slide1 p {
+    padding: 10px;
+    position: relative;
+    bottom: 80px;
+    color: #cbcbb3;
+    font-size: 10px;
+    font-family: 'Roboto Slab', serif;
+}
+@media (min-width: 1000px) {
+    main .slide1 p {
+        font-size: 20px;
+    }
+}
+main .slide2 {
+    transition: all 0.5s;
+}
+main .slide2:hover {
+    opacity: 0.3;
+    transform: scale(1.01);
+}
+main .slide2 h1 {
+    color: #fff;
+    padding: 10px;
+    font-family: 'IM Fell English SC', serif;
+    font-size: 10px;
+    transition: all 1s;
+    position: relative;
+    bottom: 50px;
+}
+@media (min-width:600px) {
+    main .slide2 h1 {
+        font-size: 20px;
+        bottom: 90px;
+    }
+}
+@media (min-width:1000px) {
+    main .slide2 h1 {
+         font-size: 40px;
+    }  
+}
+main .pagination-info {
+    text-align: center;
+    margin: 0 .75rem 1.875rem;
+    font-weight: 600;
+    font-size: 1.25rem;
+    color: white;
+}
+main .pagination-info input[type=number] {
+    height: 2.25rem;
+    width: 3.125rem;
+    vertical-align: middle;
+    font-size: 1.25rem;
+    text-align: center;
+    background-color: #339933;
+    border-style: none;
+    border-radius: 1.125rem;
+    color: white;
+    font-family: 'Quando', serif;
+}
+.pagination-buttons {
+    border-style: solid;
+    border-color: #339933;
+    border-width: .0625rem;
+    border-radius: .3125rem;
+    height: 2.25rem;
+    font-size: 1.25rem;
+    padding: 0 .625rem;
+    margin: 0;
+    vertical-align: middle;
+    background-color: transparent;
+    color: white;
+    font-family: 'Quando', serif;
+}
+.pagination-current-page {
+    font-family: 'Quando', serif;
+}
+
+
+
+/* footer */
+footer {
+    background: #141418;
+}
+footer ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+}
+footer ul li {
+    margin: 0 10px;
+}
+footer .social a {
+    margin: 0 .5rem;
+    color: #fff;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 1s;
+}
+footer .social a:hover {
+    transform: scale(1.2);
+    box-shadow: 5px 5px 2px 1px rgba(0, 0, 0, 0.6);
+}
+footer .social .facebook {
+    background-color: #4b64a6;
+}
+footer .social .twitter {
+    background-color: #00abf1;
+}
+footer .social .youtube {
+    background-color: #c4302a;
+}
+footer .copyright {
+    color: #fff;
+    background: black;
+    text-align: center;
+}
