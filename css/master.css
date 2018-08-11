@@ -30,7 +30,7 @@ body {
 
 
 
- /*Header*/
+ /* Header */
 header {
     background: #141418;
     position: -webkit-sticky;
@@ -142,7 +142,7 @@ label[for="bt_menu"] {
 
 
 
-/*Main*/
+/* Main */
 main img {
     width: 100%;
     border-radius:10px;
@@ -176,7 +176,7 @@ main .intro-text p {
     font-style: italic;
 }
 
-/*Slide*/
+/* Slide */
 main .post-detail {
     margin: 20px;
     padding: 10px;
@@ -304,7 +304,7 @@ main .pagination-info input[type=number] {
 
 
 
-/* footer */
+/* Footer */
 footer {
     background: #141418;
 }
